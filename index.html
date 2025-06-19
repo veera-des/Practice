@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML - Demo Beginner Level</title>
+  <link rel="icon" type="image/png" href="https://sketchok.com/images/articles/06-anime/002-one-piece/26/16m.jpg">
+  
+  <!-- 🔐 LOGIN CHECK -->
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      alert("🔐 Please login first.");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background: #fd0202;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      margin-top: 10px;
+    }
+    /* Logout button */
+    #logoutBtn {
+      float: right;
+      margin: 10px;
+      background: #d9534f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #logoutBtn:hover {
+      background: #c9302c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔘 LOGOUT BUTTON -->
+  <button id="logoutBtn" onclick="logout()">Logout</button>
+
+  <h1>HTML Demo - From Beginner to Advanced</h1>
+
+  <!-- Section 1: Basic Tags -->
+  <section>
+    <h2>1. Basic Tags</h2>
+    <p>This is a <strong>paragraph</strong> with <em>emphasis</em> and <u>underline</u>.</p>
+    <h3>Unordered Lists</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <h3>Ordered Lists</h3>
+    <ol>
+      <li>Learn HTML</li>
+      <li>Learn CSS</li>
+      <li>Practice JavaScript</li>
+    </ol>
+  </section>
+
+  <!-- Section 2: Links and Images -->
+  <section>
+    <h2>2. Links and Images</h2>
+    <p>Visit <a href="https://www.onlinegdb.com/" target="_blank">onlineGDB</a></p>
+    <img src="https://sketchok.com/images/articles/06-anime/002-one-piece/26/16m.jpg" alt="sample image">
+  </section>
+
+  <!-- Section 3: Tables -->
+  <section>
+    <h2>3. Tables</h2>
+    <table border="1" cellpadding="10">
+      <tr><th>Name</th><th>Role</th></tr>
+      <tr><td>Folk</td><td>Developer</td></tr>
+      <tr><td>Alice</td><td>Designer</td></tr>
+    </table>
+  </section>
+
+  <!-- Section 4: Forms -->
+  <section>
+    <h2>4. Forms</h2>
+    <form id="infoForm">
+      <label>Name: <input type="text" name="name"></label><br><br>
+      <label>Email: <input type="email" name="email"></label><br><br>
+      <label>Gender:
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+      </label><br><br>
+      <label>Country:
+        <select name="country">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+      </label><br><br>
+      <label>Message:<br>
+        <textarea name="message" rows="4" cols="30"></textarea>
+      </label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Section 5: Media -->
+  <section>
+    <h2>5. Audio and Video</h2>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio><br><br>
+    <video width="320" height="240" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Section 6: Semantic Elements -->
+  <section>
+    <h2>6. Semantic Elements</h2>
+    <header><strong>Header</strong> - Contains top info like logo or nav</header>
+    <nav><strong>Nav</strong> - Navigation menu</nav>
+    <article><strong>Article</strong> - A self-contained piece of content.
+      <p>This is inside an article tag.</p>
+    </article>
+    <footer><strong>Footer</strong> - Contact, copyright etc.</footer>
+  </section>
+
+  <!-- Section 7: HTML5 Canvas -->
+  <section>
+    <h2>7. Advanced HTML5 Features</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+  </section>
+
+  <!-- Section 8: Embed Content -->
+  <section>
+    <h2>8. Embed External Content</h2>
+    <p>YouTube Video:</p>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Section 9: HTML Entities -->
+  <section>
+    <h2>9. HTML Entities</h2>
+    <p>Less than: &lt; &nbsp;&nbsp; Greater than: &gt;</p>
+    <p>Copyright: &copy;</p>
+    <p>Trademark: &trade;</p>
+  </section>
+
+  <!-- Section 10: Responsive -->
+  <section>
+    <h2>10. Responsive Web Design Basics</h2>
+    <p>Viewport is already set in the <code>&lt;head&gt;</code>.</p>
+    <div style="display: flex; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 150px; background: #ddd; padding: 10px;">Box 1</div>
+      <div style="flex: 1; min-width: 150px; background: #bbb; padding: 10px;">Box 2</div>
+      <div style="flex: 1; min-width: 150px; background: #999; padding: 10px;">Box 3</div>
+    </div>
+  </section>
+
+  <!-- Section 11: Ticket Booking -->
+  <section>
+    <h2>11. Ticket Booking Section</h2>
+    <form id="ticketForm">
+      <div style="padding: 10px;">
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required style="min-width: 250px; padding: 8px;"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" name="phone" id="phone" placeholder="Enter phone number" required style="min-width: 250px; padding: 8px;"><br><br>
+
+        <label for="movie">Select a Tamil Movie:</label><br>
+        <select name="movie" id="movie" required style="min-width: 250px; padding: 8px;">
+          <option value="">-- Choose a Movie --</option>
+          <option value="Garudan">Garudan</option>
+          <option value="Raayan">Raayan</option>
+          <option value="Coolie">Coolie</option>
+        </select><br><br>
+
+        <button type="submit" style="padding: 10px 20px;">Confirm Ticket</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Draw canvas
+    const c = document.getElementById("myCanvas");
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(20, 20, 150, 50);
+
+    // Info Form
+    document.getElementById('infoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.elements.name.value;
+      const email = this.elements.email.value;
+      const gender = this.elements.gender.value;
+      const country = this.elements.country.value;
+      const message = this.elements.message.value;
+      alert(`Name: ${name}\nEmail: ${email}\nGender: ${gender}\nCountry: ${country}\nMessage: ${message}`);
+    });
+
+    // Ticket Booking
+    document.getElementById('ticketForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.elements.email.value;
+      const phone = this.elements.phone.value;
+      const movie = this.elements.movie.value;
+      alert(`Email: ${email}\nPhone: ${phone}\nMovie: ${movie}\n✅ Ticket Confirmed!`);
+    });
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      alert("🔓 Logged out successfully.");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
